@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment form</title>
+    <link rel="icon" href="/images/pikachu2.png" type="image/x-icon" />
+     
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Fill this form to book an Appointment with me</h1>
+    </header>
+    <main>
+      <section>
+        <div id="message-area"></div>
+        <div class="form-container">
+          <h2>APPOINTMENT FORM</h2>
+          <form action="/submit" method="POST">
+            <div class="form-group first-name">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" required />
+            </div>
+
+            <div class="form-group last-name">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" required />
+            </div>
+
+            <div class="form-group email">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group password">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+
+            <div class="form-group mobile">
+              <label for="mobile">Mobile Number</label>
+              <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                pattern="[0-9]{10}"
+                required
+              />
+            </div>
+
+            <div class="form-group age">
+              <label for="age">Age</label>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                min="1"
+                max="120"
+                required
+              />
+            </div>
+
+            <div class="form-group gender">
+              <label>Gender</label>
+              <div class="gender-options">
+                <label>
+                  <input type="radio" name="gender" value="male" required />
+                  Male
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="female" />
+                  Female
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="other" />
+                  Other
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group feedback">
+              <label for="feedback">Say Something</label>
+              <textarea
+                id="feedback"
+                name="feedback"
+                placeholder="Share your thoughts..."
+              ></textarea>
+            </div>
+
+            <div class="form-group submit-button">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

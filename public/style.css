@@ -1,0 +1,102 @@
+/* Reset default margin and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: rgb(101, 212, 212);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-container {
+  background: #eea1a4;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+/* Each form group in horizontal layout */
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  flex: 0 0 150px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Adjust textarea height */
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Gender group with nested flex layout */
+.form-group.gender {
+  align-items: flex-start;
+}
+
+.gender-options {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gender-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: normal;
+}
+
+/* Submit button style */
+.submit-button {
+  justify-content: flex-end;
+}
+
+.submit-button button {
+  padding: 12px 24px;
+  background: #123;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button button:hover {
+  background: #77f982;
+  color: #000;
+}
